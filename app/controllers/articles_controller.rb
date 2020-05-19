@@ -38,6 +38,8 @@ class ArticlesController < ApplicationController
 
   def destroy 
     Article.find(params[:id]).destroy
+
+    # Tagging.destroy_all
     flash.notice = "Deleted!"
     redirect_to articles_path
   end 
